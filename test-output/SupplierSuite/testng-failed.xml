@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [SupplierSuite]">
+  <parameter name="browsername" value="CH"/>
+  <test name="SupplierTest1(failed)">
+    <parameter name="browsername" value="CH"/>
+    <classes>
+      <class name="Transfer.Transfer_Booking_Scheduled">
+        <methods>
+          <include name="getResult"/>
+          <include name="TransferBookingScheduled" invocation-numbers="0"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Transfer.Transfer_Booking_Scheduled -->
+    </classes>
+  </test> <!-- SupplierTest1(failed) -->
+</suite> <!-- Failed suite [SupplierSuite] -->

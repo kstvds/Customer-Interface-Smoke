@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="SupplierSuite" duration-ms="105651" started-at="2018-03-02T12:44:31Z" finished-at="2018-03-02T12:46:17Z">
+    <groups>
+    </groups>
+    <test name="SupplierTest1" duration-ms="105651" started-at="2018-03-02T12:44:31Z" finished-at="2018-03-02T12:46:17Z">
+      <class name="Transfer.Transfer_Booking_Scheduled">
+        <test-method status="PASS" signature="TransferBookingScheduled(java.lang.String)[pri:0, instance:Transfer.Transfer_Booking_Scheduled@3d921e20]" name="TransferBookingScheduled" duration-ms="103112" started-at="2018-03-02T18:14:31Z" finished-at="2018-03-02T18:16:14Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[CH]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TransferBookingScheduled -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:Transfer.Transfer_Booking_Scheduled@3d921e20]" name="getResult" is-config="true" duration-ms="2" started-at="2018-03-02T18:16:14Z" finished-at="2018-03-02T18:16:14Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TransferBookingScheduled status=SUCCESS method=Transfer_Booking_Scheduled.TransferBookingScheduled(java.lang.String)[pri:0, instance:Transfer.Transfer_Booking_Scheduled@3d921e20] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:Transfer.Transfer_Booking_Scheduled@3d921e20]" name="afterTest" is-config="true" duration-ms="2522" started-at="2018-03-02T18:16:14Z" finished-at="2018-03-02T18:16:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- Transfer.Transfer_Booking_Scheduled -->
+    </test> <!-- SupplierTest1 -->
+  </suite> <!-- SupplierSuite -->
+</testng-results>

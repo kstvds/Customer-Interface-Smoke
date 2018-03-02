@@ -1,0 +1,6 @@
+ChromeDriver = D:\\chromedriver.exe
+IEDriver = D:\\IEDriverServer.exe
+URL = https://ctssuppliers2.stage.aws.dotw.com/_myadmin/
+ScreenShot=D:/Supplier Repository/CI Smoke/Test Screenshots
+ReportPath=D:\\Supplier Repository\\CI Smoke\\Report\\Report.html
+ExcelPathBook = D:\\Supplier Repository\\CI Smoke\\TestData-Latest.xlsx

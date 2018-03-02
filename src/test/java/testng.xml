@@ -1,0 +1,9 @@
+<!--parallel="tests" thread-count="2"-->
+<suite name="SupplierSuite">
+<test name="SupplierTest1" >
+<parameter name="browsername" value="CH"/>
+<classes> 
+<class name="Transfer.Transfer_Booking_Scheduled" />
+</classes> 
+</test>
+</suite>
