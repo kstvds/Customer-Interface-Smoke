@@ -37,6 +37,9 @@ import lib.ExtentManager;
 import lib.Takescreenshot;
 import lib.DriverAndObjectDetails.DriverName;
 
+/* #######  Test for Scheduled Transfer booking #########
+######  Scenario Logs In, Books a specified Scheduled Transfer  ##### */
+
 public class Transfer_Booking_Scheduled {
 	public WebDriver driverqa;
 	ExtentTest test;
@@ -108,13 +111,13 @@ public class Transfer_Booking_Scheduled {
 			wait.until(pageLoadCondition);
 			action.sendKeys(Keys.ESCAPE).build().perform();
 			Thread.sleep(2000);
-			obj.Takesnap(driverqa, Config.SnapShotPath() + "/Transfer/Transfer_Booking_Private/Log-In.jpg");
+			obj.Takesnap(driverqa, Config.SnapShotPath() + "/Transfer/Transfer_Booking_Scheduled/Log-In.jpg");
 
 		} catch (Throwable e) {
 
-			obj.Takesnap(driverqa, Config.SnapShotPath() + "/Transfer/Error/Transfer_Booking_Private/Log-In.jpg");
+			obj.Takesnap(driverqa, Config.SnapShotPath() + "/Transfer/Error/Transfer_Booking_Scheduled/Log-In.jpg");
 			test.log(LogStatus.FAIL, "Login");
-			errorpath = Config.SnapShotPath() + "/Transfer/Error/Transfer_Booking_Private/Log-In.jpg";
+			errorpath = Config.SnapShotPath() + "/Transfer/Error/Transfer_Booking_Scheduled/Log-In.jpg";
 			logger.info(e.getMessage());
 			test.log(LogStatus.FAIL, e.getMessage());
 			rep.endTest(test);
@@ -181,13 +184,13 @@ public class Transfer_Booking_Scheduled {
 			 * Noofchilds.clear(); Noofchilds.sendKeys("1");
 			 */
 			Thread.sleep(2000);
-			obj.Takesnap(driverqa, Config.SnapShotPath() + "/Transfer/Transfer_Booking_Private/Filters.jpg");
+			obj.Takesnap(driverqa, Config.SnapShotPath() + "/Transfer/Transfer_Booking_Scheduled/Filters.jpg");
 			String expectedresult = excel.getData(0, 32, 1);
 			System.out.println(expectedresult);
 			driverqa.findElement(Tour.searchtourbutton).click();
 			wait.until(ExpectedConditions.visibilityOfElementLocated(Search.HotelTitle));
 			Thread.sleep(2000);
-			obj.Takesnap(driverqa, Config.SnapShotPath() + "/Transfer/Transfer_Booking_Private/Search-Result.jpg");
+			obj.Takesnap(driverqa, Config.SnapShotPath() + "/Transfer/Transfer_Booking_Scheduled/Search-Result.jpg");
 			String actualresult = driverqa.findElement(Search.HotelTitle).getText();
 			System.out.println(actualresult);
 			Assert.assertTrue(actualresult.contains(expectedresult));
@@ -198,8 +201,8 @@ public class Transfer_Booking_Scheduled {
 			test.log(LogStatus.FAIL, "Transfer Search");
 
 			obj.Takesnap(driverqa,
-					Config.SnapShotPath() + "/Transfer/Error/Transfer_Booking_Private/Search-Result.jpg");
-			errorpath = Config.SnapShotPath() + "/Transfer/Error/Transfer_Booking_Private/Search-Result.jpg";
+					Config.SnapShotPath() + "/Transfer/Error/Transfer_Booking_Scheduled/Search-Result.jpg");
+			errorpath = Config.SnapShotPath() + "/Transfer/Error/Transfer_Booking_Scheduled/Search-Result.jpg";
 			logger.info(e.getMessage());
 			test.log(LogStatus.FAIL, e.getMessage());
 			rep.endTest(test);
@@ -219,7 +222,7 @@ public class Transfer_Booking_Scheduled {
 			wait.until(ExpectedConditions.visibilityOfElementLocated(Tour.SelectTour));
 			Thread.sleep(2000);
 			obj.Takesnap(driverqa,
-					Config.SnapShotPath() + "/Transfer/Transfer_Booking_Private/Available_Transfer_List.jpg");
+					Config.SnapShotPath() + "/Transfer/Transfer_Booking_Scheduled/Available_Transfer_List.jpg");
 			driverqa.findElement(Tour.SelectTour).click();
 			test.log(LogStatus.INFO, "Transfer Selected");
 			logger.info("Transfer Selected");
@@ -241,49 +244,53 @@ public class Transfer_Booking_Scheduled {
 			driverqa.findElement(Transfer.pickUp).sendKeys("Airport");
 			driverqa.findElement(Transfer.DropOff).sendKeys("Hotel");
 			Thread.sleep(2000);
-			obj.Takesnap(driverqa, Config.SnapShotPath() + "/Transfer/Transfer_Booking_Private/Passenger-Details.jpg");
+			obj.Takesnap(driverqa,
+					Config.SnapShotPath() + "/Transfer/Transfer_Booking_Scheduled/Passenger-Details.jpg");
 			driverqa.findElement(Transfer.TransferPrcdToBookChckBox).click();
 			logger.info("Entered Passenger details");
 			test.log(LogStatus.INFO, "Entered Passenger details");
 			test.log(LogStatus.PASS, "Passenger details");
 			driverqa.findElement(Tour.ContinueTourBook).click();
-			/*wait.until(ExpectedConditions.visibilityOfElementLocated(Booking.ProccedToBook));*/
-			/*Thread.sleep(2000);
-			obj.Takesnap(driverqa,
-					Config.SnapShotPath() + "/Transfer/Transfer_Booking_Private/Confirm-Transfer-Booking.jpg");
-			driverqa.findElement(Booking.ProccedToBook).click();
-			logger.info("Entering Payment details");
-			test.log(LogStatus.INFO, "Entering Payment details");
-			wait.until(ExpectedConditions.visibilityOfElementLocated(PaymentPage.FirstName));
-			
+			/*
+			 * wait.until(ExpectedConditions.visibilityOfElementLocated(Booking.
+			 * ProccedToBook));
+			 */
+			/*
+			 * Thread.sleep(2000); obj.Takesnap(driverqa, Config.SnapShotPath()
+			 * +
+			 * "/Transfer/Transfer_Booking_Private/Confirm-Transfer-Booking.jpg"
+			 * ); driverqa.findElement(Booking.ProccedToBook).click();
+			 * logger.info("Entering Payment details"); test.log(LogStatus.INFO,
+			 * "Entering Payment details");
+			 * wait.until(ExpectedConditions.visibilityOfElementLocated(
+			 * PaymentPage.FirstName));
+			 * 
 			 * WebElement FirstName =
 			 * driverqa.findElement(PaymentPage.FirstName); FirstName.clear();
 			 * FirstName.sendKeys(excel.getData(0, 21, 1));
-			 
-			WebElement LastName = driverqa.findElement(PaymentPage.LastName);
-			LastName.clear();
-			LastName.sendKeys(excel.getData(0, 22, 2));
-			WebElement Address = driverqa.findElement(PaymentPage.Address);
-			Address.clear();
-			Address.sendKeys("Kolkata1234");
-			WebElement CardNo = driverqa.findElement(PaymentPage.CardNumber);
-			CardNo.clear();
-			CardNo.sendKeys(excel.getData(0, 21, 5));
-			WebElement CVVNo = driverqa.findElement(PaymentPage.CVVNumber);
-			CVVNo.clear();
-			CVVNo.sendKeys(excel.getData(0, 22, 5));
-			driverqa.findElement(PaymentPage.AcceptTerms).click();
-			logger.info("Entered Payment details");
-			test.log(LogStatus.INFO, "Entered Payment details");
-			test.log(LogStatus.PASS, "Payment details");
-			Thread.sleep(2000);
-			obj.Takesnap(driverqa, Config.SnapShotPath() + "/Transfer/Transfer_Booking_Private/Payment-Details.jpg");
-			driverqa.findElement(PaymentPage.Acceptpayment).click();*/
+			 * 
+			 * WebElement LastName = driverqa.findElement(PaymentPage.LastName);
+			 * LastName.clear(); LastName.sendKeys(excel.getData(0, 22, 2));
+			 * WebElement Address = driverqa.findElement(PaymentPage.Address);
+			 * Address.clear(); Address.sendKeys("Kolkata1234"); WebElement
+			 * CardNo = driverqa.findElement(PaymentPage.CardNumber);
+			 * CardNo.clear(); CardNo.sendKeys(excel.getData(0, 21, 5));
+			 * WebElement CVVNo = driverqa.findElement(PaymentPage.CVVNumber);
+			 * CVVNo.clear(); CVVNo.sendKeys(excel.getData(0, 22, 5));
+			 * driverqa.findElement(PaymentPage.AcceptTerms).click();
+			 * logger.info("Entered Payment details"); test.log(LogStatus.INFO,
+			 * "Entered Payment details"); test.log(LogStatus.PASS,
+			 * "Payment details"); Thread.sleep(2000); obj.Takesnap(driverqa,
+			 * Config.SnapShotPath() +
+			 * "/Transfer/Transfer_Booking_Private/Payment-Details.jpg");
+			 * driverqa.findElement(PaymentPage.Acceptpayment).click();
+			 */
 			wait.until(ExpectedConditions.visibilityOfElementLocated(Booking.BookingStatusPrepay));
 			JavascriptExecutor js1 = (JavascriptExecutor) driverqa;
-			/*Thread.sleep(2000);
-			obj.Takesnap(driverqa,
-					Config.SnapShotPath() + "/Transfer/Transfer_Booking_Private/Search-Booking-Page.jpg");*/
+			/*
+			 * Thread.sleep(2000); obj.Takesnap(driverqa, Config.SnapShotPath()
+			 * + "/Transfer/Transfer_Booking_Private/Search-Booking-Page.jpg");
+			 */
 			// WebElement Element = driverqa.findElement(Booking.Invoice);
 			// This will scroll the page till the element is found
 			/*
@@ -291,13 +298,13 @@ public class Transfer_Booking_Scheduled {
 			 * Assert.assertTrue(ActualNoOfAdults.equalsIgnoreCase(
 			 * ExpectedNoOfAdults));
 			 */
-			/*driverqa.findElement(Booking.ViewBooking).click();*/
+			/* driverqa.findElement(Booking.ViewBooking).click(); */
 			Thread.sleep(2000);
-			obj.Takesnap(driverqa, Config.SnapShotPath() + "/Transfer/Transfer_Booking_Private/Booking-Details1.jpg");
+			obj.Takesnap(driverqa, Config.SnapShotPath() + "/Transfer/Transfer_Booking_Scheduled/Booking-Details1.jpg");
 			// This will scroll the page till the element is found
 			js1.executeScript("window.scrollTo(0, document.body.scrollHeight)");
 			Thread.sleep(2000);
-			obj.Takesnap(driverqa, Config.SnapShotPath() + "/Transfer/Transfer_Booking_Private/Booking-Details2.jpg");
+			obj.Takesnap(driverqa, Config.SnapShotPath() + "/Transfer/Transfer_Booking_Scheduled/Booking-Details2.jpg");
 			wait.until(ExpectedConditions.visibilityOfElementLocated(Booking.BookingStatusPrepay));
 			String ExpectedStatus = "Confirmed";
 			String ExpectedTransferName = excel.getData(0, 32, 1);
@@ -319,8 +326,8 @@ public class Transfer_Booking_Scheduled {
 
 		} catch (Throwable e) {
 			test.log(LogStatus.FAIL, "Transfer Book");
-			obj.Takesnap(driverqa, Config.SnapShotPath() + "/Transfer/Error/Transfer_Booking_Private/Booking.jpg");
-			errorpath = Config.SnapShotPath() + "/Transfer/Error/Transfer_Booking_Private/Booking.jpg";
+			obj.Takesnap(driverqa, Config.SnapShotPath() + "/Transfer/Error/Transfer_Booking_Scheduled/Booking.jpg");
+			errorpath = Config.SnapShotPath() + "/Transfer/Error/Transfer_Booking_Scheduled/Booking.jpg";
 			logger.info(e.getMessage());
 			test.log(LogStatus.FAIL, e.getMessage());
 			rep.endTest(test);
@@ -351,4 +358,3 @@ public class Transfer_Booking_Scheduled {
 		driverqa.close();
 	}
 }
-

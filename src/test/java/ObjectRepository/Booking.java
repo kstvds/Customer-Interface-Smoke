@@ -49,4 +49,6 @@ public class Booking {
 	public static final By FindBookingWithLastName = By.xpath("//*[@id='bookingSearchForm']/table/tbody/tr[7]/td/table/tbody/tr/td[5]/input");
 	public static final By AfterBookingName = By.xpath("//*[@id='bookingDetailsContainer']/div[1]/div[4]/table/tbody/tr[2]/td[2]");
 	public static final By PendingPayment = By.xpath("//*[@id='right_panel-menu']/div[1]/ul[1]/li[3]/a");
+	public static final By RoomPriceChange = By.xpath("//li[contains(text(),'We are unable to proceed as the offer price has been revised.  Please select the desired room and resubmit your request.')]");
+	public static final By ScrollElement = By.xpath("//*[@id='collapsiblePanelTabChain']");
 }

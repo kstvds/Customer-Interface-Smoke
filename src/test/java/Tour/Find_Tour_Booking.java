@@ -283,7 +283,7 @@ public class Find_Tour_Booking {
 			Thread.sleep(2000);
 			obj.Takesnap(driverqa, Config.SnapShotPath() + "/Tour/Find_Booking/Booking-Details2.jpg");
 			wait.until(ExpectedConditions.visibilityOfElementLocated(Booking.BookingStatusPrepay));
-			String ExpectedStatus = "Confirmed";
+			String ExpectedStatus = "CONFIRMED";
 			String ExpectedTourName = excel.getData(0, 51, 1);
 			ExpectedTourDate = excel.getData(0, 65, 1);
 			ActualTourDate = driverqa.findElement(Tour.AfterBookingTourDate).getText();
@@ -337,11 +337,11 @@ public class Find_Tour_Booking {
 			obj.Takesnap(driverqa, Config.SnapShotPath() + "/Tour/Find_Booking/View-Booking.jpg");
 			driverqa.findElement(Booking.ViewBooking).click();
 			Thread.sleep(2000);
-			obj.Takesnap(driverqa, Config.SnapShotPath() + "/Tour/Find_Booking/Booking-Details1.jpg");
+			obj.Takesnap(driverqa, Config.SnapShotPath() + "/Tour/Find_Booking/Searched-Booking-Details1.jpg");
 			// This will scroll the page till the element is found
 			js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
 			Thread.sleep(2000);
-			obj.Takesnap(driverqa, Config.SnapShotPath() + "/Tour/Find_Booking/Booking-Details2.jpg");
+			obj.Takesnap(driverqa, Config.SnapShotPath() + "/Tour/Find_Booking/Searched-Booking-Details2.jpg");
 			wait.until(ExpectedConditions.visibilityOfElementLocated(Booking.BookingStatusPrepay));
 			wait.until(ExpectedConditions.visibilityOfElementLocated(Booking.BookingStatusPrepay));
 			String ExpectedStatus = "Confirmed";

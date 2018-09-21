@@ -162,7 +162,7 @@ public class Add_Edit_Sub_Customer {
 			subcustomer_Confirm_Email.sendKeys("kaustav.d@dotw.com");
 			WebElement subcustomer_Login_ID = driverqa.findElement(Others.AddSubCustomerLoginID);
 			subcustomer_Login_ID.clear();
-			subcustomer_Login_ID.sendKeys("kausdas");
+			subcustomer_Login_ID.sendKeys("kausdas009");
 			WebElement subcustomer_Password= driverqa.findElement(Others.AddSubCustomerPassword);
 			subcustomer_Password.clear();
 			subcustomer_Password.sendKeys("P@ssw0rd");
@@ -202,7 +202,7 @@ public class Add_Edit_Sub_Customer {
 			logger.info("Searching Sub Customer");
 			WebElement SearchLogIN = driverqa.findElement(Others.SearchSubCustLoginID);
 			SearchLogIN.clear();
-			SearchLogIN.sendKeys("kaustav");
+			SearchLogIN.sendKeys("kausdas0010");
 			Thread.sleep(2000);
 			obj.Takesnap(driverqa, Config.SnapShotPath() + "/Others/Add_Edit_Sub_Customer/Searched-Sub-Customer.jpg");
 			driverqa.findElement(Others.SaerchSubcust).click();
@@ -256,7 +256,7 @@ public class Add_Edit_Sub_Customer {
 
 		rep.endTest(test);
 		rep.flush();
-		driverqa.close();
+		//driverqa.close();
 	}
 }
 

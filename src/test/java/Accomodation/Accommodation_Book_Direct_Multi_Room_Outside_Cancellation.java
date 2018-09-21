@@ -136,14 +136,14 @@ public class Accommodation_Book_Direct_Multi_Room_Outside_Cancellation {
 			wait.until(ExpectedConditions.visibilityOfElementLocated(Search.dest));
 			driverqa.findElement(Multi_Room.MultiRoomDropdown).click();
 			wait.until(ExpectedConditions.visibilityOfElementLocated(Multi_Room.SelectTwooRooms));
-			Thread.sleep(1000);
+			Thread.sleep(2000);
 			WebElement element1 = driverqa.findElement(Multi_Room.SelectTwooRooms);
 			Actions actions = new Actions(driverqa);
 			actions.moveToElement(element1).click().perform();
 			driverqa.findElement(Search.dest).sendKeys(excel.getData(0, 13, 1));
-			Thread.sleep(3000);
+			Thread.sleep(6000);
 			action.sendKeys(Keys.ARROW_DOWN).build().perform();
-			action.sendKeys(Keys.ARROW_DOWN).build().perform();
+			//action.sendKeys(Keys.ARROW_DOWN).build().perform();
 			action.sendKeys(Keys.ENTER).build().perform();
 			test.log(LogStatus.INFO, "Selecting dates");
 			driverqa.findElement(Search.InDate).click();
@@ -227,16 +227,18 @@ public class Accommodation_Book_Direct_Multi_Room_Outside_Cancellation {
 			dropdown1.selectByVisibleText("2");
 			Thread.sleep(2000);
 			obj.Takesnap(driverqa, Config.SnapShotPath()
-					+ "/Accomodation/Accommodation_Book_Direct_Multi_Room_Outside_Cancellation/Passenger-Details.jpg");
+					+ "/Accomodation/Accommodation_Book_Direct_Multi_Room_Outside_Cancellation/Room-Selected.jpg");
 			/*WebElement Booknowbutton = driverqa.findElement(Multi_Room.BookNowMultiRoom); 
 		    Actions actions = new Actions(driverqa);
             actions.moveToElement(Booknowbutton).click().perform();*/
-			Thread.sleep(1000);
-			JavascriptExecutor js2 = (JavascriptExecutor) driverqa;
-
+			
+			JavascriptExecutor js3 = (JavascriptExecutor) driverqa;
+			WebElement ScrollElement = driverqa.findElement(Booking.ScrollElement);
+			
 			// This will scroll the web page till end.
-
-			js2.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+			
+			js3.executeScript("arguments[0].scrollIntoView();", ScrollElement);
+			Thread.sleep(1000);
 			driverqa.findElement(Multi_Room.BookNowMultiRoom).click();
 			
 			test.log(LogStatus.INFO, "Room Selected");
@@ -388,6 +390,6 @@ public class Accommodation_Book_Direct_Multi_Room_Outside_Cancellation {
 
 		rep.endTest(test);
 		rep.flush();
-		// driverqa.close();
+		driverqa.close();
 	}
 }

@@ -1,9 +1,195 @@
 <!--parallel="tests" thread-count="2"-->
 <suite name="SupplierSuite">
-<test name="SupplierTest1" >
+ <test name="SupplierTest1" >
+<parameter name="browsername" value="CH"/>
+<classes> 
+<class name="Accomodation.Accommodation_Book_Direct_Room_Outside_Cancellation" />
+</classes> 
+</test>  
+<test name="SupplierTest2" >
+<parameter name="browsername" value="CH"/>
+<classes> 
+<class name="Accomodation.Accommodation_Book_Direct_Multi_Room_Outside_Cancellation" />
+</classes> 
+</test>   
+ <test name="SupplierTest3" >
+<parameter name="browsername" value="CH"/>
+<classes> 
+<class name="Accomodation.Accommodation_Book_DOTW_Multi_Room_Outside_Cancellation" />
+</classes> 
+</test>
+ <test name="SupplierTest4" >
+<parameter name="browsername" value="CH"/>
+<classes> 
+<class name="Accomodation.Accommodation_Book_DOTW_Room_Outside_Cancellation" />
+</classes>
+</test> 
+ <test name="SupplierTest5" >
+<parameter name="browsername" value="CH"/>
+<classes> 
+<class name="Accomodation.Accommodation_Book_Extra_Meal" />
+</classes> 
+</test>  
+ <test name="SupplierTest6" >
+<parameter name="browsername" value="CH"/>
+<classes> 
+<class name="Accomodation.Accommodation_Book_Third_Party_Multi_Room_Outside_Cancellation" />
+</classes> 
+</test>  
+  <test name="SupplierTest7" >
+<parameter name="browsername" value="CH"/>
+<classes> 
+<class name="Accomodation.Accommodation_Book_Third_Party_Room_Outside_Cancellation" />
+</classes> 
+</test>     
+ <test name="SupplierTest8" >
+<parameter name="browsername" value="CH"/>
+<classes> 
+<class name="Accomodation.Accomodation_Book_Adult_With_Children" />
+</classes> 
+</test>  
+ <test name="SupplierTest9" >
+<parameter name="browsername" value="CH"/>
+<classes> 
+ <class name="Accomodation.Accomodation_Booking_Documents" />
+</classes> 
+</test>  
+  <test name="SupplierTest10" >
+<parameter name="browsername" value="CH"/>
+<classes>  
+<class name="Accomodation.Accomodation_Search_With_Filters" />
+</classes> 
+</test>   
+  <test name="SupplierTest11" >
+<parameter name="browsername" value="CH"/>
+<classes> 
+<class name="Accomodation.Amend_Booking" />
+</classes> 
+</test>  
+ <test name="SupplierTest12" >
+<parameter name="browsername" value="CH"/>
+<classes> 
+<class name="Accomodation.Cancel_Booking" />
+</classes> 
+</test> 
+  <test name="SupplierTest13" >
+<parameter name="browsername" value="CH"/>
+<classes> 
+<class name="Accomodation.Find_Booking_With_Passenger_Name" />
+</classes> 
+</test> 
+<test name="SupplierTest14" >
+<parameter name="browsername" value="CH"/>
+<classes> 
+<class name="Accomodation.Find_Booking" />
+</classes> 
+</test>  
+ <test name="SupplierTest15" >
+<parameter name="browsername" value="CH"/>
+<classes> 
+<class name="Others.Add_Edit_Sub_Customer" />
+</classes> 
+</test>  
+<test name="SupplierTest16" >
+<parameter name="browsername" value="CH"/>
+<classes> 
+<class name="Others.Credit_Card_Customer_Login" />
+</classes> 
+</test>
+<test name="SupplierTest17" >
+<parameter name="browsername" value="CH"/>
+<classes> 
+<class name="Others.Credit_Customer_Login" />
+</classes> 
+</test>
+<test name="SupplierTest18" >
+<parameter name="browsername" value="CH"/>
+<classes> 
+<class name="Others.Edit_Profile" />
+</classes> 
+</test> 
+<test name="SupplierTest20" >
+<parameter name="browsername" value="CH"/>
+<classes> 
+<class name="Others.Inactive_Customer_LogIn" />
+</classes> 
+</test>   
+<!-- <test name="SupplierTest21" >
+<parameter name="browsername" value="CH"/>
+<classes> 
+<class name="Others.Pending_Payments" />
+</classes> 
+</test> --> 
+<test name="SupplierTest22" >
+<parameter name="browsername" value="CH"/>
+<classes> 
+<class name="Others.Prepay_Customer_Login" />
+</classes> 
+</test>  
+ <test name="SupplierTest23" >
+<parameter name="browsername" value="CH"/>
+<classes> 
+<class name="Others.Register_Credit_Card_Customer" />
+</classes> 
+</test>  
+<!-- <test name="SupplierTest24" >
+<parameter name="browsername" value="CH"/>
+<classes> 
+<class name="Others.Register_Credit_Customer" />
+</classes> 
+</test> -->
+<!-- <test name="SupplierTest25" >
+<parameter name="browsername" value="CH"/>
+<classes> 
+<class name="Others.Register_Prepay_Customer" />
+</classes> 
+</test> --> 
+<test name="SupplierTest26" >
+<parameter name="browsername" value="CH"/>
+<classes> 
+<class name="Others.Supplier_Login" />
+</classes> 
+</test>   
+ <test name="SupplierTest27" >
+<parameter name="browsername" value="CH"/>
+<classes> 
+<class name="Tour.Book_Tour" />
+</classes> 
+</test> 
+ <test name="SupplierTest28" >
+<parameter name="browsername" value="CH"/>
+<classes> 
+<class name="Tour.Find_Tour_Booking" />
+</classes> 
+</test> 
+<test name="SupplierTest29" >
+<parameter name="browsername" value="CH"/>
+<classes> 
+<class name="Tour.Search_Tour" />
+</classes> 
+</test>  
+<!-- <test name="SupplierTest30" >
+<parameter name="browsername" value="CH"/>
+<classes> 
+<class name="Transfer.Transfer_Search" />
+</classes> 
+</test>
+<test name="SupplierTest31" >
 <parameter name="browsername" value="CH"/>
 <classes> 
 <class name="Transfer.Transfer_Booking_Scheduled" />
 </classes> 
+</test> 
+<test name="SupplierTest32" >
+<parameter name="browsername" value="CH"/>
+<classes> 
+<class name="Transfer.Transfer_Booking_Private" />
+</classes> 
 </test>
+<test name="SupplierTest33" >
+<parameter name="browsername" value="CH"/>
+<classes> 
+<class name="Transfer.Find_Transfer_Booking" />
+</classes> 
+</test>  --> 
 </suite>

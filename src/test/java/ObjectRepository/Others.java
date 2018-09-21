@@ -21,7 +21,7 @@ public class Others {
     public static final By BookingProforma = By.xpath("//*[@id='booking_proforma_invoice']");
     public static final By BookingProformaHotelName = By.xpath("//*[@id='availableForPrint']/tbody/tr[3]/td/table/tbody/tr[1]/td[2]");
     public static final By BookingProformaDate = By.xpath("//*[@id='availableForPrint']/tbody/tr[3]/td/table/tbody/tr[1]/td[4]");
-    public static final By MyAccount = By.xpath("//*[@id='header']/div[2]/ul[1]/li[5]/div/button");
+    public static final By MyAccount = By.xpath("//*[contains(text(),'MY ACCOUNT')]");
     public static final By EditProfile = By.xpath("//*[@id='header']/div[2]/ul[1]/li[5]/div/ul/li[10]/a");
     public static final By EditProfileChangeName = By.xpath("//*[@id='LastName']");
     public static final By ConfirmUpdateProfile = By.xpath("//*[@id='button3']");

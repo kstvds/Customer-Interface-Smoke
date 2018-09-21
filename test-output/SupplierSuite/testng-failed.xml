@@ -2,16 +2,1252 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [SupplierSuite]">
   <parameter name="browsername" value="CH"/>
-  <test name="SupplierTest1(failed)">
+  <test name="SupplierTest2(failed)">
     <parameter name="browsername" value="CH"/>
     <classes>
-      <class name="Transfer.Transfer_Booking_Scheduled">
+      <class name="Accomodation.Accommodation_Book_DOTW_Multi_Room_Outside_Cancellation">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Accomodation.Accommodation_Book_DOTW_Multi_Room_Outside_Cancellation -->
+      <class name="Accomodation.Accommodation_Book_Third_Party_Multi_Room_Outside_Cancellation">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Accomodation.Accommodation_Book_Third_Party_Multi_Room_Outside_Cancellation -->
+      <class name="Accomodation.Find_Booking">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Accomodation.Find_Booking -->
+      <class name="Accomodation.Accommodation_Book_Direct_Room_Outside_Cancellation">
         <methods>
           <include name="getResult"/>
-          <include name="TransferBookingScheduled" invocation-numbers="0"/>
           <include name="afterTest"/>
         </methods>
-      </class> <!-- Transfer.Transfer_Booking_Scheduled -->
+      </class> <!-- Accomodation.Accommodation_Book_Direct_Room_Outside_Cancellation -->
+      <class name="Others.Edit_Profile">
+        <methods>
+          <include name="getResult"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Others.Edit_Profile -->
+      <class name="Accomodation.Accomodation_Search_With_Filters">
+        <methods>
+          <include name="getResult"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Accomodation.Accomodation_Search_With_Filters -->
+      <class name="Accomodation.Accommodation_Book_Extra_Meal">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Accomodation.Accommodation_Book_Extra_Meal -->
+      <class name="Others.Prepay_Customer_Login">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Others.Prepay_Customer_Login -->
+      <class name="Accomodation.Accommodation_Book_Direct_Multi_Room_Outside_Cancellation">
+        <methods>
+          <include name="afterTest"/>
+          <include name="AccommodationBookDirectMultiRoomOutsideCancellation" invocation-numbers="0"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Accomodation.Accommodation_Book_Direct_Multi_Room_Outside_Cancellation -->
+      <class name="Accomodation.Cancel_Booking">
+        <methods>
+          <include name="getResult"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Accomodation.Cancel_Booking -->
+      <class name="Tour.Search_Tour">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Tour.Search_Tour -->
+      <class name="Others.Add_Edit_Sub_Customer">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Others.Add_Edit_Sub_Customer -->
+      <class name="Others.Supplier_Login">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Others.Supplier_Login -->
+      <class name="Accomodation.Accomodation_Booking_Documents">
+        <methods>
+          <include name="getResult"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Accomodation.Accomodation_Booking_Documents -->
+      <class name="Others.Credit_Customer_Login">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Others.Credit_Customer_Login -->
+      <class name="Tour.Find_Tour_Booking">
+        <methods>
+          <include name="getResult"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Tour.Find_Tour_Booking -->
+      <class name="Others.Credit_Card_Customer_Login">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Others.Credit_Card_Customer_Login -->
+      <class name="Accomodation.Accomodation_Book_Adult_With_Children">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Accomodation.Accomodation_Book_Adult_With_Children -->
+      <class name="Tour.Book_Tour">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Tour.Book_Tour -->
+      <class name="Accomodation.Accommodation_Book_Third_Party_Room_Outside_Cancellation">
+        <methods>
+          <include name="getResult"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Accomodation.Accommodation_Book_Third_Party_Room_Outside_Cancellation -->
+      <class name="Accomodation.Find_Booking_With_Passenger_Name">
+        <methods>
+          <include name="getResult"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Accomodation.Find_Booking_With_Passenger_Name -->
+      <class name="Accomodation.Amend_Booking">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Accomodation.Amend_Booking -->
+      <class name="Others.Register_Credit_Card_Customer">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Others.Register_Credit_Card_Customer -->
+      <class name="Accomodation.Accommodation_Book_DOTW_Room_Outside_Cancellation">
+        <methods>
+          <include name="getResult"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Accomodation.Accommodation_Book_DOTW_Room_Outside_Cancellation -->
+      <class name="Others.Inactive_Customer_LogIn">
+        <methods>
+          <include name="getResult"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Others.Inactive_Customer_LogIn -->
     </classes>
-  </test> <!-- SupplierTest1(failed) -->
+  </test> <!-- SupplierTest2(failed) -->
+  <test name="SupplierTest6(failed)">
+    <parameter name="browsername" value="CH"/>
+    <classes>
+      <class name="Accomodation.Accommodation_Book_DOTW_Multi_Room_Outside_Cancellation">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Accomodation.Accommodation_Book_DOTW_Multi_Room_Outside_Cancellation -->
+      <class name="Accomodation.Accommodation_Book_Third_Party_Multi_Room_Outside_Cancellation">
+        <methods>
+          <include name="afterTest"/>
+          <include name="AccommodationBookThirdPartyMultiRoomOutsideCancellation" invocation-numbers="0"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Accomodation.Accommodation_Book_Third_Party_Multi_Room_Outside_Cancellation -->
+      <class name="Accomodation.Find_Booking">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Accomodation.Find_Booking -->
+      <class name="Accomodation.Accommodation_Book_Direct_Room_Outside_Cancellation">
+        <methods>
+          <include name="getResult"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Accomodation.Accommodation_Book_Direct_Room_Outside_Cancellation -->
+      <class name="Others.Edit_Profile">
+        <methods>
+          <include name="getResult"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Others.Edit_Profile -->
+      <class name="Accomodation.Accomodation_Search_With_Filters">
+        <methods>
+          <include name="getResult"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Accomodation.Accomodation_Search_With_Filters -->
+      <class name="Accomodation.Accommodation_Book_Extra_Meal">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Accomodation.Accommodation_Book_Extra_Meal -->
+      <class name="Others.Prepay_Customer_Login">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Others.Prepay_Customer_Login -->
+      <class name="Accomodation.Accommodation_Book_Direct_Multi_Room_Outside_Cancellation">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Accomodation.Accommodation_Book_Direct_Multi_Room_Outside_Cancellation -->
+      <class name="Accomodation.Cancel_Booking">
+        <methods>
+          <include name="getResult"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Accomodation.Cancel_Booking -->
+      <class name="Tour.Search_Tour">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Tour.Search_Tour -->
+      <class name="Others.Add_Edit_Sub_Customer">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Others.Add_Edit_Sub_Customer -->
+      <class name="Others.Supplier_Login">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Others.Supplier_Login -->
+      <class name="Accomodation.Accomodation_Booking_Documents">
+        <methods>
+          <include name="getResult"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Accomodation.Accomodation_Booking_Documents -->
+      <class name="Others.Credit_Customer_Login">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Others.Credit_Customer_Login -->
+      <class name="Tour.Find_Tour_Booking">
+        <methods>
+          <include name="getResult"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Tour.Find_Tour_Booking -->
+      <class name="Others.Credit_Card_Customer_Login">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Others.Credit_Card_Customer_Login -->
+      <class name="Accomodation.Accomodation_Book_Adult_With_Children">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Accomodation.Accomodation_Book_Adult_With_Children -->
+      <class name="Tour.Book_Tour">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Tour.Book_Tour -->
+      <class name="Accomodation.Accommodation_Book_Third_Party_Room_Outside_Cancellation">
+        <methods>
+          <include name="getResult"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Accomodation.Accommodation_Book_Third_Party_Room_Outside_Cancellation -->
+      <class name="Accomodation.Find_Booking_With_Passenger_Name">
+        <methods>
+          <include name="getResult"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Accomodation.Find_Booking_With_Passenger_Name -->
+      <class name="Accomodation.Amend_Booking">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Accomodation.Amend_Booking -->
+      <class name="Others.Register_Credit_Card_Customer">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Others.Register_Credit_Card_Customer -->
+      <class name="Accomodation.Accommodation_Book_DOTW_Room_Outside_Cancellation">
+        <methods>
+          <include name="getResult"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Accomodation.Accommodation_Book_DOTW_Room_Outside_Cancellation -->
+      <class name="Others.Inactive_Customer_LogIn">
+        <methods>
+          <include name="getResult"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Others.Inactive_Customer_LogIn -->
+    </classes>
+  </test> <!-- SupplierTest6(failed) -->
+  <test name="SupplierTest7(failed)">
+    <parameter name="browsername" value="CH"/>
+    <classes>
+      <class name="Accomodation.Accommodation_Book_DOTW_Multi_Room_Outside_Cancellation">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Accomodation.Accommodation_Book_DOTW_Multi_Room_Outside_Cancellation -->
+      <class name="Accomodation.Accommodation_Book_Third_Party_Multi_Room_Outside_Cancellation">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Accomodation.Accommodation_Book_Third_Party_Multi_Room_Outside_Cancellation -->
+      <class name="Accomodation.Find_Booking">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Accomodation.Find_Booking -->
+      <class name="Accomodation.Accommodation_Book_Direct_Room_Outside_Cancellation">
+        <methods>
+          <include name="getResult"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Accomodation.Accommodation_Book_Direct_Room_Outside_Cancellation -->
+      <class name="Others.Edit_Profile">
+        <methods>
+          <include name="getResult"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Others.Edit_Profile -->
+      <class name="Accomodation.Accomodation_Search_With_Filters">
+        <methods>
+          <include name="getResult"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Accomodation.Accomodation_Search_With_Filters -->
+      <class name="Accomodation.Accommodation_Book_Extra_Meal">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Accomodation.Accommodation_Book_Extra_Meal -->
+      <class name="Others.Prepay_Customer_Login">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Others.Prepay_Customer_Login -->
+      <class name="Accomodation.Accommodation_Book_Direct_Multi_Room_Outside_Cancellation">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Accomodation.Accommodation_Book_Direct_Multi_Room_Outside_Cancellation -->
+      <class name="Accomodation.Cancel_Booking">
+        <methods>
+          <include name="getResult"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Accomodation.Cancel_Booking -->
+      <class name="Tour.Search_Tour">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Tour.Search_Tour -->
+      <class name="Others.Add_Edit_Sub_Customer">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Others.Add_Edit_Sub_Customer -->
+      <class name="Others.Supplier_Login">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Others.Supplier_Login -->
+      <class name="Accomodation.Accomodation_Booking_Documents">
+        <methods>
+          <include name="getResult"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Accomodation.Accomodation_Booking_Documents -->
+      <class name="Others.Credit_Customer_Login">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Others.Credit_Customer_Login -->
+      <class name="Tour.Find_Tour_Booking">
+        <methods>
+          <include name="getResult"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Tour.Find_Tour_Booking -->
+      <class name="Others.Credit_Card_Customer_Login">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Others.Credit_Card_Customer_Login -->
+      <class name="Accomodation.Accomodation_Book_Adult_With_Children">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Accomodation.Accomodation_Book_Adult_With_Children -->
+      <class name="Tour.Book_Tour">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Tour.Book_Tour -->
+      <class name="Accomodation.Accommodation_Book_Third_Party_Room_Outside_Cancellation">
+        <methods>
+          <include name="AccommodationBookThirdPartyRoomOutsideCancellation" invocation-numbers="0"/>
+          <include name="getResult"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Accomodation.Accommodation_Book_Third_Party_Room_Outside_Cancellation -->
+      <class name="Accomodation.Find_Booking_With_Passenger_Name">
+        <methods>
+          <include name="getResult"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Accomodation.Find_Booking_With_Passenger_Name -->
+      <class name="Accomodation.Amend_Booking">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Accomodation.Amend_Booking -->
+      <class name="Others.Register_Credit_Card_Customer">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Others.Register_Credit_Card_Customer -->
+      <class name="Accomodation.Accommodation_Book_DOTW_Room_Outside_Cancellation">
+        <methods>
+          <include name="getResult"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Accomodation.Accommodation_Book_DOTW_Room_Outside_Cancellation -->
+      <class name="Others.Inactive_Customer_LogIn">
+        <methods>
+          <include name="getResult"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Others.Inactive_Customer_LogIn -->
+    </classes>
+  </test> <!-- SupplierTest7(failed) -->
+  <test name="SupplierTest12(failed)">
+    <parameter name="browsername" value="CH"/>
+    <classes>
+      <class name="Accomodation.Accommodation_Book_DOTW_Multi_Room_Outside_Cancellation">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Accomodation.Accommodation_Book_DOTW_Multi_Room_Outside_Cancellation -->
+      <class name="Accomodation.Accommodation_Book_Third_Party_Multi_Room_Outside_Cancellation">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Accomodation.Accommodation_Book_Third_Party_Multi_Room_Outside_Cancellation -->
+      <class name="Accomodation.Find_Booking">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Accomodation.Find_Booking -->
+      <class name="Accomodation.Accommodation_Book_Direct_Room_Outside_Cancellation">
+        <methods>
+          <include name="getResult"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Accomodation.Accommodation_Book_Direct_Room_Outside_Cancellation -->
+      <class name="Others.Edit_Profile">
+        <methods>
+          <include name="getResult"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Others.Edit_Profile -->
+      <class name="Accomodation.Accomodation_Search_With_Filters">
+        <methods>
+          <include name="getResult"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Accomodation.Accomodation_Search_With_Filters -->
+      <class name="Accomodation.Accommodation_Book_Extra_Meal">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Accomodation.Accommodation_Book_Extra_Meal -->
+      <class name="Others.Prepay_Customer_Login">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Others.Prepay_Customer_Login -->
+      <class name="Accomodation.Accommodation_Book_Direct_Multi_Room_Outside_Cancellation">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Accomodation.Accommodation_Book_Direct_Multi_Room_Outside_Cancellation -->
+      <class name="Accomodation.Cancel_Booking">
+        <methods>
+          <include name="CancelBooking" invocation-numbers="0"/>
+          <include name="getResult"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Accomodation.Cancel_Booking -->
+      <class name="Tour.Search_Tour">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Tour.Search_Tour -->
+      <class name="Others.Add_Edit_Sub_Customer">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Others.Add_Edit_Sub_Customer -->
+      <class name="Others.Supplier_Login">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Others.Supplier_Login -->
+      <class name="Accomodation.Accomodation_Booking_Documents">
+        <methods>
+          <include name="getResult"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Accomodation.Accomodation_Booking_Documents -->
+      <class name="Others.Credit_Customer_Login">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Others.Credit_Customer_Login -->
+      <class name="Tour.Find_Tour_Booking">
+        <methods>
+          <include name="getResult"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Tour.Find_Tour_Booking -->
+      <class name="Others.Credit_Card_Customer_Login">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Others.Credit_Card_Customer_Login -->
+      <class name="Accomodation.Accomodation_Book_Adult_With_Children">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Accomodation.Accomodation_Book_Adult_With_Children -->
+      <class name="Tour.Book_Tour">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Tour.Book_Tour -->
+      <class name="Accomodation.Accommodation_Book_Third_Party_Room_Outside_Cancellation">
+        <methods>
+          <include name="getResult"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Accomodation.Accommodation_Book_Third_Party_Room_Outside_Cancellation -->
+      <class name="Accomodation.Find_Booking_With_Passenger_Name">
+        <methods>
+          <include name="getResult"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Accomodation.Find_Booking_With_Passenger_Name -->
+      <class name="Accomodation.Amend_Booking">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Accomodation.Amend_Booking -->
+      <class name="Others.Register_Credit_Card_Customer">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Others.Register_Credit_Card_Customer -->
+      <class name="Accomodation.Accommodation_Book_DOTW_Room_Outside_Cancellation">
+        <methods>
+          <include name="getResult"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Accomodation.Accommodation_Book_DOTW_Room_Outside_Cancellation -->
+      <class name="Others.Inactive_Customer_LogIn">
+        <methods>
+          <include name="getResult"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Others.Inactive_Customer_LogIn -->
+    </classes>
+  </test> <!-- SupplierTest12(failed) -->
+  <test name="SupplierTest15(failed)">
+    <parameter name="browsername" value="CH"/>
+    <classes>
+      <class name="Accomodation.Accommodation_Book_DOTW_Multi_Room_Outside_Cancellation">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Accomodation.Accommodation_Book_DOTW_Multi_Room_Outside_Cancellation -->
+      <class name="Accomodation.Accommodation_Book_Third_Party_Multi_Room_Outside_Cancellation">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Accomodation.Accommodation_Book_Third_Party_Multi_Room_Outside_Cancellation -->
+      <class name="Accomodation.Find_Booking">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Accomodation.Find_Booking -->
+      <class name="Accomodation.Accommodation_Book_Direct_Room_Outside_Cancellation">
+        <methods>
+          <include name="getResult"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Accomodation.Accommodation_Book_Direct_Room_Outside_Cancellation -->
+      <class name="Others.Edit_Profile">
+        <methods>
+          <include name="getResult"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Others.Edit_Profile -->
+      <class name="Accomodation.Accomodation_Search_With_Filters">
+        <methods>
+          <include name="getResult"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Accomodation.Accomodation_Search_With_Filters -->
+      <class name="Accomodation.Accommodation_Book_Extra_Meal">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Accomodation.Accommodation_Book_Extra_Meal -->
+      <class name="Others.Prepay_Customer_Login">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Others.Prepay_Customer_Login -->
+      <class name="Accomodation.Accommodation_Book_Direct_Multi_Room_Outside_Cancellation">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Accomodation.Accommodation_Book_Direct_Multi_Room_Outside_Cancellation -->
+      <class name="Accomodation.Cancel_Booking">
+        <methods>
+          <include name="getResult"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Accomodation.Cancel_Booking -->
+      <class name="Tour.Search_Tour">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Tour.Search_Tour -->
+      <class name="Others.Add_Edit_Sub_Customer">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+          <include name="AddEditSubCustomer" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- Others.Add_Edit_Sub_Customer -->
+      <class name="Others.Supplier_Login">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Others.Supplier_Login -->
+      <class name="Accomodation.Accomodation_Booking_Documents">
+        <methods>
+          <include name="getResult"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Accomodation.Accomodation_Booking_Documents -->
+      <class name="Others.Credit_Customer_Login">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Others.Credit_Customer_Login -->
+      <class name="Tour.Find_Tour_Booking">
+        <methods>
+          <include name="getResult"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Tour.Find_Tour_Booking -->
+      <class name="Others.Credit_Card_Customer_Login">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Others.Credit_Card_Customer_Login -->
+      <class name="Accomodation.Accomodation_Book_Adult_With_Children">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Accomodation.Accomodation_Book_Adult_With_Children -->
+      <class name="Tour.Book_Tour">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Tour.Book_Tour -->
+      <class name="Accomodation.Accommodation_Book_Third_Party_Room_Outside_Cancellation">
+        <methods>
+          <include name="getResult"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Accomodation.Accommodation_Book_Third_Party_Room_Outside_Cancellation -->
+      <class name="Accomodation.Find_Booking_With_Passenger_Name">
+        <methods>
+          <include name="getResult"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Accomodation.Find_Booking_With_Passenger_Name -->
+      <class name="Accomodation.Amend_Booking">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Accomodation.Amend_Booking -->
+      <class name="Others.Register_Credit_Card_Customer">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Others.Register_Credit_Card_Customer -->
+      <class name="Accomodation.Accommodation_Book_DOTW_Room_Outside_Cancellation">
+        <methods>
+          <include name="getResult"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Accomodation.Accommodation_Book_DOTW_Room_Outside_Cancellation -->
+      <class name="Others.Inactive_Customer_LogIn">
+        <methods>
+          <include name="getResult"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Others.Inactive_Customer_LogIn -->
+    </classes>
+  </test> <!-- SupplierTest15(failed) -->
+  <test name="SupplierTest23(failed)">
+    <parameter name="browsername" value="CH"/>
+    <classes>
+      <class name="Accomodation.Accommodation_Book_DOTW_Multi_Room_Outside_Cancellation">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Accomodation.Accommodation_Book_DOTW_Multi_Room_Outside_Cancellation -->
+      <class name="Accomodation.Accommodation_Book_Third_Party_Multi_Room_Outside_Cancellation">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Accomodation.Accommodation_Book_Third_Party_Multi_Room_Outside_Cancellation -->
+      <class name="Accomodation.Find_Booking">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Accomodation.Find_Booking -->
+      <class name="Accomodation.Accommodation_Book_Direct_Room_Outside_Cancellation">
+        <methods>
+          <include name="getResult"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Accomodation.Accommodation_Book_Direct_Room_Outside_Cancellation -->
+      <class name="Others.Edit_Profile">
+        <methods>
+          <include name="getResult"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Others.Edit_Profile -->
+      <class name="Accomodation.Accomodation_Search_With_Filters">
+        <methods>
+          <include name="getResult"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Accomodation.Accomodation_Search_With_Filters -->
+      <class name="Accomodation.Accommodation_Book_Extra_Meal">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Accomodation.Accommodation_Book_Extra_Meal -->
+      <class name="Others.Prepay_Customer_Login">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Others.Prepay_Customer_Login -->
+      <class name="Accomodation.Accommodation_Book_Direct_Multi_Room_Outside_Cancellation">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Accomodation.Accommodation_Book_Direct_Multi_Room_Outside_Cancellation -->
+      <class name="Accomodation.Cancel_Booking">
+        <methods>
+          <include name="getResult"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Accomodation.Cancel_Booking -->
+      <class name="Tour.Search_Tour">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Tour.Search_Tour -->
+      <class name="Others.Add_Edit_Sub_Customer">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Others.Add_Edit_Sub_Customer -->
+      <class name="Others.Supplier_Login">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Others.Supplier_Login -->
+      <class name="Accomodation.Accomodation_Booking_Documents">
+        <methods>
+          <include name="getResult"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Accomodation.Accomodation_Booking_Documents -->
+      <class name="Others.Credit_Customer_Login">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Others.Credit_Customer_Login -->
+      <class name="Tour.Find_Tour_Booking">
+        <methods>
+          <include name="getResult"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Tour.Find_Tour_Booking -->
+      <class name="Others.Credit_Card_Customer_Login">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Others.Credit_Card_Customer_Login -->
+      <class name="Accomodation.Accomodation_Book_Adult_With_Children">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Accomodation.Accomodation_Book_Adult_With_Children -->
+      <class name="Tour.Book_Tour">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Tour.Book_Tour -->
+      <class name="Accomodation.Accommodation_Book_Third_Party_Room_Outside_Cancellation">
+        <methods>
+          <include name="getResult"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Accomodation.Accommodation_Book_Third_Party_Room_Outside_Cancellation -->
+      <class name="Accomodation.Find_Booking_With_Passenger_Name">
+        <methods>
+          <include name="getResult"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Accomodation.Find_Booking_With_Passenger_Name -->
+      <class name="Others.Register_Credit_Card_Customer">
+        <methods>
+          <include name="afterTest"/>
+          <include name="RegisterCreditCardCustomer" invocation-numbers="0"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Others.Register_Credit_Card_Customer -->
+      <class name="Accomodation.Amend_Booking">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Accomodation.Amend_Booking -->
+      <class name="Accomodation.Accommodation_Book_DOTW_Room_Outside_Cancellation">
+        <methods>
+          <include name="getResult"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Accomodation.Accommodation_Book_DOTW_Room_Outside_Cancellation -->
+      <class name="Others.Inactive_Customer_LogIn">
+        <methods>
+          <include name="getResult"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Others.Inactive_Customer_LogIn -->
+    </classes>
+  </test> <!-- SupplierTest23(failed) -->
+  <test name="SupplierTest27(failed)">
+    <parameter name="browsername" value="CH"/>
+    <classes>
+      <class name="Accomodation.Accommodation_Book_DOTW_Multi_Room_Outside_Cancellation">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Accomodation.Accommodation_Book_DOTW_Multi_Room_Outside_Cancellation -->
+      <class name="Accomodation.Accommodation_Book_Third_Party_Multi_Room_Outside_Cancellation">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Accomodation.Accommodation_Book_Third_Party_Multi_Room_Outside_Cancellation -->
+      <class name="Accomodation.Find_Booking">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Accomodation.Find_Booking -->
+      <class name="Accomodation.Accommodation_Book_Direct_Room_Outside_Cancellation">
+        <methods>
+          <include name="getResult"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Accomodation.Accommodation_Book_Direct_Room_Outside_Cancellation -->
+      <class name="Others.Edit_Profile">
+        <methods>
+          <include name="getResult"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Others.Edit_Profile -->
+      <class name="Accomodation.Accomodation_Search_With_Filters">
+        <methods>
+          <include name="getResult"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Accomodation.Accomodation_Search_With_Filters -->
+      <class name="Accomodation.Accommodation_Book_Extra_Meal">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Accomodation.Accommodation_Book_Extra_Meal -->
+      <class name="Others.Prepay_Customer_Login">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Others.Prepay_Customer_Login -->
+      <class name="Accomodation.Accommodation_Book_Direct_Multi_Room_Outside_Cancellation">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Accomodation.Accommodation_Book_Direct_Multi_Room_Outside_Cancellation -->
+      <class name="Accomodation.Cancel_Booking">
+        <methods>
+          <include name="getResult"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Accomodation.Cancel_Booking -->
+      <class name="Tour.Search_Tour">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Tour.Search_Tour -->
+      <class name="Others.Add_Edit_Sub_Customer">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Others.Add_Edit_Sub_Customer -->
+      <class name="Others.Supplier_Login">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Others.Supplier_Login -->
+      <class name="Accomodation.Accomodation_Booking_Documents">
+        <methods>
+          <include name="getResult"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Accomodation.Accomodation_Booking_Documents -->
+      <class name="Others.Credit_Customer_Login">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Others.Credit_Customer_Login -->
+      <class name="Tour.Find_Tour_Booking">
+        <methods>
+          <include name="getResult"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Tour.Find_Tour_Booking -->
+      <class name="Others.Credit_Card_Customer_Login">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Others.Credit_Card_Customer_Login -->
+      <class name="Accomodation.Accomodation_Book_Adult_With_Children">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Accomodation.Accomodation_Book_Adult_With_Children -->
+      <class name="Tour.Book_Tour">
+        <methods>
+          <include name="afterTest"/>
+          <include name="BookTour" invocation-numbers="0"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Tour.Book_Tour -->
+      <class name="Accomodation.Accommodation_Book_Third_Party_Room_Outside_Cancellation">
+        <methods>
+          <include name="getResult"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Accomodation.Accommodation_Book_Third_Party_Room_Outside_Cancellation -->
+      <class name="Accomodation.Find_Booking_With_Passenger_Name">
+        <methods>
+          <include name="getResult"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Accomodation.Find_Booking_With_Passenger_Name -->
+      <class name="Accomodation.Amend_Booking">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Accomodation.Amend_Booking -->
+      <class name="Others.Register_Credit_Card_Customer">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Others.Register_Credit_Card_Customer -->
+      <class name="Accomodation.Accommodation_Book_DOTW_Room_Outside_Cancellation">
+        <methods>
+          <include name="getResult"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Accomodation.Accommodation_Book_DOTW_Room_Outside_Cancellation -->
+      <class name="Others.Inactive_Customer_LogIn">
+        <methods>
+          <include name="getResult"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Others.Inactive_Customer_LogIn -->
+    </classes>
+  </test> <!-- SupplierTest27(failed) -->
+  <test name="SupplierTest28(failed)">
+    <parameter name="browsername" value="CH"/>
+    <classes>
+      <class name="Accomodation.Accommodation_Book_DOTW_Multi_Room_Outside_Cancellation">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Accomodation.Accommodation_Book_DOTW_Multi_Room_Outside_Cancellation -->
+      <class name="Accomodation.Accommodation_Book_Third_Party_Multi_Room_Outside_Cancellation">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Accomodation.Accommodation_Book_Third_Party_Multi_Room_Outside_Cancellation -->
+      <class name="Accomodation.Find_Booking">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Accomodation.Find_Booking -->
+      <class name="Accomodation.Accommodation_Book_Direct_Room_Outside_Cancellation">
+        <methods>
+          <include name="getResult"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Accomodation.Accommodation_Book_Direct_Room_Outside_Cancellation -->
+      <class name="Others.Edit_Profile">
+        <methods>
+          <include name="getResult"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Others.Edit_Profile -->
+      <class name="Accomodation.Accomodation_Search_With_Filters">
+        <methods>
+          <include name="getResult"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Accomodation.Accomodation_Search_With_Filters -->
+      <class name="Accomodation.Accommodation_Book_Extra_Meal">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Accomodation.Accommodation_Book_Extra_Meal -->
+      <class name="Others.Prepay_Customer_Login">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Others.Prepay_Customer_Login -->
+      <class name="Accomodation.Accommodation_Book_Direct_Multi_Room_Outside_Cancellation">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Accomodation.Accommodation_Book_Direct_Multi_Room_Outside_Cancellation -->
+      <class name="Accomodation.Cancel_Booking">
+        <methods>
+          <include name="getResult"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Accomodation.Cancel_Booking -->
+      <class name="Tour.Search_Tour">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Tour.Search_Tour -->
+      <class name="Others.Add_Edit_Sub_Customer">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Others.Add_Edit_Sub_Customer -->
+      <class name="Others.Supplier_Login">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Others.Supplier_Login -->
+      <class name="Accomodation.Accomodation_Booking_Documents">
+        <methods>
+          <include name="getResult"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Accomodation.Accomodation_Booking_Documents -->
+      <class name="Others.Credit_Customer_Login">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Others.Credit_Customer_Login -->
+      <class name="Tour.Find_Tour_Booking">
+        <methods>
+          <include name="FindTourBooking" invocation-numbers="0"/>
+          <include name="getResult"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Tour.Find_Tour_Booking -->
+      <class name="Others.Credit_Card_Customer_Login">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Others.Credit_Card_Customer_Login -->
+      <class name="Accomodation.Accomodation_Book_Adult_With_Children">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Accomodation.Accomodation_Book_Adult_With_Children -->
+      <class name="Tour.Book_Tour">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Tour.Book_Tour -->
+      <class name="Accomodation.Accommodation_Book_Third_Party_Room_Outside_Cancellation">
+        <methods>
+          <include name="getResult"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Accomodation.Accommodation_Book_Third_Party_Room_Outside_Cancellation -->
+      <class name="Accomodation.Find_Booking_With_Passenger_Name">
+        <methods>
+          <include name="getResult"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Accomodation.Find_Booking_With_Passenger_Name -->
+      <class name="Accomodation.Amend_Booking">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Accomodation.Amend_Booking -->
+      <class name="Others.Register_Credit_Card_Customer">
+        <methods>
+          <include name="afterTest"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Others.Register_Credit_Card_Customer -->
+      <class name="Accomodation.Accommodation_Book_DOTW_Room_Outside_Cancellation">
+        <methods>
+          <include name="getResult"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Accomodation.Accommodation_Book_DOTW_Room_Outside_Cancellation -->
+      <class name="Others.Inactive_Customer_LogIn">
+        <methods>
+          <include name="getResult"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Others.Inactive_Customer_LogIn -->
+    </classes>
+  </test> <!-- SupplierTest28(failed) -->
 </suite> <!-- Failed suite [SupplierSuite] -->

@@ -143,7 +143,7 @@ public class Accomodation_Booking_Documents {
 			Thread.sleep(2000);
 			wait.until(ExpectedConditions.visibilityOfElementLocated(Search.dest));
 			driverqa.findElement(Search.dest).sendKeys(excel.getData(0, 12, 1));
-			Thread.sleep(3000);
+			Thread.sleep(5000);
 			action.sendKeys(Keys.ARROW_DOWN).build().perform();
 			// action.sendKeys(Keys.ARROW_DOWN).build().perform();
 			action.sendKeys(Keys.ENTER).build().perform();

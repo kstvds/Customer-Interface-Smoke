@@ -133,7 +133,7 @@ public class Accomodation_Book_Adult_With_Children {
 			Thread.sleep(2000);
 			wait.until(ExpectedConditions.visibilityOfElementLocated(Search.dest));
 			driverqa.findElement(Search.dest).sendKeys(excel.getData(0, 12, 1));
-			Thread.sleep(3000);
+			Thread.sleep(6000);
 			action.sendKeys(Keys.ARROW_DOWN).build().perform();
 			// action.sendKeys(Keys.ARROW_DOWN).build().perform();
 			action.sendKeys(Keys.ENTER).build().perform();
@@ -173,14 +173,14 @@ public class Accomodation_Book_Adult_With_Children {
 			WebElement Noofchilds = driverqa.findElement(Search.NoOfChilds);
 			Noofchilds.clear();
 			Noofchilds.sendKeys("1");
-			driverqa.findElement(Search.PaymentOption).click();
+			/*driverqa.findElement(Search.PaymentOption).click();
 			wait.until(ExpectedConditions.visibilityOfElementLocated(Search.NetPay));
 			Thread.sleep(1000);
 			WebElement element = driverqa.findElement(Search.NetPay);
 
 			Actions actions = new Actions(driverqa);
 
-			actions.moveToElement(element).click().perform();
+			actions.moveToElement(element).click().perform();*/
 			Thread.sleep(2000);
 			obj.Takesnap(driverqa,
 					Config.SnapShotPath() + "/Accomodation/Accommodation_Book_Adult_With_Children/Filters.jpg");
@@ -258,33 +258,29 @@ public class Accomodation_Book_Adult_With_Children {
 			driverqa.findElement(Booking.ProccedToBook).click();
 			logger.info("Entering Payment details");
 			test.log(LogStatus.INFO, "Entering Payment details");
-			wait.until(ExpectedConditions.visibilityOfElementLocated(Booking.BookingCost));
-			/*
-			 * String HotelCost =
-			 * driverqa.findElement(Booking.BookingCost).getText();
-			 * System.out.println(HotelCost); Thread.sleep(2000);
-			 * driverqa.findElement(Booking.CreditCost).sendKeys(HotelCost);
-			 */
-			// or any locator strategy that you find suitable
-			WebElement locOfOrder = driverqa.findElement(Booking.BookingCost);
-			Actions act = new Actions(driverqa);
-			act.moveToElement(locOfOrder).doubleClick().build().perform();
-			// catch here is double click on the text will by default select the
-			// text
-			// now apply copy command
-			driverqa.findElement(Booking.BookingCost).sendKeys(Keys.chord(Keys.CONTROL, "c"));
-			Thread.sleep(2000);
-			// now apply the command to paste
-			driverqa.findElement(Booking.CreditCost).sendKeys(Keys.chord(Keys.CONTROL, "v"));
+			wait.until(ExpectedConditions.visibilityOfElementLocated(PaymentPage.FirstName));
+			WebElement FirstName = driverqa.findElement(PaymentPage.FirstName);
+			FirstName.clear();
+			FirstName.sendKeys(excel.getData(0, 22, 1));
+			WebElement LastName = driverqa.findElement(PaymentPage.LastName);
+			LastName.clear();
+			LastName.sendKeys(excel.getData(0, 22, 2));
+			WebElement Address = driverqa.findElement(PaymentPage.Address);
+			Address.clear();
+			Address.sendKeys("Kolkata1234");
+			WebElement CardNo = driverqa.findElement(PaymentPage.CardNumber);
+			CardNo.clear();
+			CardNo.sendKeys(excel.getData(0, 21, 5));
+			WebElement CVVNo = driverqa.findElement(PaymentPage.CVVNumber);
+			CVVNo.clear();
+			CVVNo.sendKeys(excel.getData(0, 22, 5));
+			driverqa.findElement(PaymentPage.AcceptTerms).click();
 			logger.info("Entered Payment details");
 			test.log(LogStatus.INFO, "Entered Payment details");
 			test.log(LogStatus.PASS, "Payment details");
 			Thread.sleep(2000);
 			obj.Takesnap(driverqa,
 					Config.SnapShotPath() + "/Accomodation/Accommodation_Book_Adult_With_Children/Payment-Details.jpg");
-			driverqa.findElement(PaymentPage.AcceptTerms).click();
-			Thread.sleep(3000);
-			driverqa.findElement(PaymentPage.AcceptTerms).click();
 			driverqa.findElement(PaymentPage.Acceptpayment).click();
 			wait.until(ExpectedConditions.visibilityOfElementLocated(Booking.ViewBooking));
 			JavascriptExecutor js = (JavascriptExecutor) driverqa;
@@ -353,6 +349,6 @@ public class Accomodation_Book_Adult_With_Children {
 
 		rep.endTest(test);
 		rep.flush();
-		driverqa.close();
+		//driverqa.close();
 	}
 }

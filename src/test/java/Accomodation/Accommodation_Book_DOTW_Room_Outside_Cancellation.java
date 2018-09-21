@@ -134,7 +134,7 @@ public class Accommodation_Book_DOTW_Room_Outside_Cancellation {
 			Thread.sleep(2000);
 			wait.until(ExpectedConditions.visibilityOfElementLocated(Search.dest));
 			driverqa.findElement(Search.dest).sendKeys(excel.getData(0, 12, 1));
-			Thread.sleep(3000);
+			Thread.sleep(6000);
 			action.sendKeys(Keys.ARROW_DOWN).build().perform();
 			// action.sendKeys(Keys.ARROW_DOWN).build().perform();
 			action.sendKeys(Keys.ENTER).build().perform();
@@ -142,7 +142,7 @@ public class Accommodation_Book_DOTW_Room_Outside_Cancellation {
 			driverqa.findElement(Search.InDate).click();
 			wait.until(ExpectedConditions.visibilityOfElementLocated(Search.CalenderIN));
 			driverqa.findElement(Search.nextmnth).click();
-			driverqa.findElement(Search.nextmnth).click();
+			//driverqa.findElement(Search.nextmnth).click();
 			List<WebElement> allDates = driverqa.findElements(Search.CalenderIN);
 
 			for (WebElement ele : allDates) {
@@ -191,7 +191,10 @@ public class Accommodation_Book_DOTW_Room_Outside_Cancellation {
 			obj.Takesnap(driverqa, Config.SnapShotPath()
 					+ "/Accomodation/Accommodation_Book_DOTW_Room_Outside_Cancellation/Search-Result.jpg");
 			String actualresult = driverqa.findElement(Search.HotelTitle).getText();
+			System.out.println(actualresult);
+			System.out.println(expectedresult);
 			Assert.assertTrue(actualresult.contains(expectedresult));
+			
 			test.log(LogStatus.INFO, "Ending HotelSearch ");
 			test.log(LogStatus.PASS, "PASSED HotelSearch ");
 			logger.info("Hotel Search Complete");
@@ -301,6 +304,6 @@ public class Accommodation_Book_DOTW_Room_Outside_Cancellation {
 
 		rep.endTest(test);
 		rep.flush();
-		driverqa.close();
+		//driverqa.close();
 	}
 }

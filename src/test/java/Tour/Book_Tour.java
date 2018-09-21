@@ -287,7 +287,7 @@ public class Book_Tour {
 			Thread.sleep(2000);
 			obj.Takesnap(driverqa, Config.SnapShotPath() + "/Tour/Book_Tour/Booking-Details2.jpg");
 			wait.until(ExpectedConditions.visibilityOfElementLocated(Booking.BookingStatusPrepay));
-			String ExpectedStatus = "Confirmed";
+			String ExpectedStatus = "CONFIRMED";
 			String ExpectedTourName = excel.getData(0, 51, 1);
 			ExpectedTourDate = excel.getData(0, 65, 1);
 			ActualTourDate = driverqa.findElement(Tour.AfterBookingTourDate).getText();
@@ -295,6 +295,14 @@ public class Book_Tour {
 			ActualTourPickUp = driverqa.findElement(Tour.AfterBookingTourPickUp).getText();
 			String ActualTourName = driverqa.findElement(Tour.AfterBookingTourName).getText();
 			String ActualStatus = driverqa.findElement(Booking.BookingStatusPrepay).getText();
+			System.out.println(ExpectedStatus);
+			System.out.println(ExpectedTourName);
+			System.out.println(ExpectedTourDate);
+			System.out.println(ActualTourDate);
+			System.out.println(ExpectedTourPickUp);
+			System.out.println(ActualTourPickUp);
+			System.out.println(ActualTourName);
+			System.out.println(ActualStatus);
 			Assert.assertTrue(ActualStatus.equalsIgnoreCase(ExpectedStatus));
 			Assert.assertTrue(ActualTourName.equalsIgnoreCase(ExpectedTourName));
 			Assert.assertTrue(ActualTourPickUp.equalsIgnoreCase(ExpectedTourPickUp));
@@ -334,6 +342,6 @@ public class Book_Tour {
 
 		rep.endTest(test);
 		rep.flush();
-		driverqa.close();
+		//driverqa.close();
 	}
 }

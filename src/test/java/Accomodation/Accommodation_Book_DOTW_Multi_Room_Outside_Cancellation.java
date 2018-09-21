@@ -141,7 +141,7 @@ public class Accommodation_Book_DOTW_Multi_Room_Outside_Cancellation {
 			Actions actions = new Actions(driverqa);
 			actions.moveToElement(element1).click().perform();
 			driverqa.findElement(Search.dest).sendKeys(excel.getData(0, 12, 1));
-			Thread.sleep(3000);
+			Thread.sleep(6000);
 			action.sendKeys(Keys.ARROW_DOWN).build().perform();
 			// action.sendKeys(Keys.ARROW_DOWN).build().perform();
 			action.sendKeys(Keys.ENTER).build().perform();
@@ -149,7 +149,7 @@ public class Accommodation_Book_DOTW_Multi_Room_Outside_Cancellation {
 			driverqa.findElement(Search.InDate).click();
 			wait.until(ExpectedConditions.visibilityOfElementLocated(Search.CalenderIN));
 			driverqa.findElement(Search.nextmnth).click();
-			driverqa.findElement(Search.nextmnth).click();
+			//driverqa.findElement(Search.nextmnth).click();
 			List<WebElement> allDates = driverqa.findElements(Search.CalenderIN);
 
 			for (WebElement ele : allDates) {
@@ -228,6 +228,13 @@ public class Accommodation_Book_DOTW_Multi_Room_Outside_Cancellation {
 			Thread.sleep(2000);
 			obj.Takesnap(driverqa, Config.SnapShotPath()
 					+ "/Accomodation/Accommodation_Book_DOTW_Multi_Room_Outside_Cancellation/Passenger-Details.jpg");
+			JavascriptExecutor js3 = (JavascriptExecutor) driverqa;
+			WebElement ScrollElement = driverqa.findElement(Booking.ScrollElement);
+			
+			// This will scroll the web page till end.
+			
+			js3.executeScript("arguments[0].scrollIntoView();", ScrollElement);
+			Thread.sleep(1000);
 			driverqa.findElement(Multi_Room.BookNowMultiRoom).click();
 			test.log(LogStatus.INFO, "Room Selected");
 			logger.info("Room Selected");
@@ -303,7 +310,17 @@ public class Accommodation_Book_DOTW_Multi_Room_Outside_Cancellation {
 			 * +
 			 * "/Accomodation/Accommodation_Book_DOTW_Multi_Room_Outside_Cancellation/Booking-Details2.jpg"
 			 * );
-			 */ Assert.assertTrue(ActualStatusRoom1.equalsIgnoreCase(ExpectedStatus));
+			 * 
+			 */
+			System.out.println(ActualStatusRoom1);
+			System.out.println(ActualStatusRoom2);
+			System.out.println(CheckinRoom1);
+			System.out.println(CheckinRoom2);
+			System.out.println(CheckoutRoom1);
+			System.out.println(CheckoutRoom2);
+			System.out.println(ExpectedCheckiN);
+			System.out.println(ExpectedCheckout);
+			Assert.assertTrue(ActualStatusRoom1.equalsIgnoreCase(ExpectedStatus));
 			Assert.assertTrue(ActualStatusRoom2.equalsIgnoreCase(ExpectedStatus));
 			Assert.assertTrue(CheckinRoom1.contains(ExpectedCheckiN));
 			Assert.assertTrue(CheckinRoom2.contains(ExpectedCheckiN));
@@ -347,6 +364,6 @@ public class Accommodation_Book_DOTW_Multi_Room_Outside_Cancellation {
 
 		rep.endTest(test);
 		rep.flush();
-		driverqa.close();
+		//driverqa.close();
 	}
 }

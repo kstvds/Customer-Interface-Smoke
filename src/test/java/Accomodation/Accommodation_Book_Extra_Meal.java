@@ -132,7 +132,7 @@ public class Accommodation_Book_Extra_Meal {
 			Thread.sleep(2000);
 			wait.until(ExpectedConditions.visibilityOfElementLocated(Search.dest));
 			driverqa.findElement(Search.dest).sendKeys(excel.getData(0, 12, 1));
-			Thread.sleep(3000);
+			Thread.sleep(6000);
 			action.sendKeys(Keys.ARROW_DOWN).build().perform();
 			// action.sendKeys(Keys.ARROW_DOWN).build().perform();
 			action.sendKeys(Keys.ENTER).build().perform();
@@ -183,7 +183,9 @@ public class Accommodation_Book_Extra_Meal {
 			obj.Takesnap(driverqa,
 					Config.SnapShotPath() + "/Accomodation/Accommodation_Book_With_Extra_Meal/Search-Result.jpg");
 			String actualresult = driverqa.findElement(Search.HotelTitle).getText();
-			Assert.assertTrue(actualresult.contains(expectedresult));
+			System.out.println(actualresult);
+			System.out.println(expectedresult);
+			Assert.assertTrue(actualresult.equalsIgnoreCase(expectedresult));
 			test.log(LogStatus.INFO, "Ending HotelSearch Credit Card");
 			test.log(LogStatus.PASS, "PASSED HotelSearch Credit Card");
 			logger.info("Hotel Search Complete Credit Card");
@@ -246,17 +248,17 @@ public class Accommodation_Book_Extra_Meal {
 			// Select(driverqa.findElement(Booking.MealGuestType));
 			Select dropdown = new Select(driverqa.findElement(Booking.MealGuestType));
 			dropdown.selectByVisibleText("Adult");
-			Thread.sleep(1000);
+			Thread.sleep(3000);
 			Select dropdown1 = new Select(driverqa.findElement(Booking.MealType));
 			dropdown1.selectByVisibleText("Lunch");
-			Thread.sleep(1000);
+			Thread.sleep(2000);
 			;
 			Select dropdown3 = new Select(driverqa.findElement(Booking.MealName));
 			dropdown3.selectByVisibleText("Superb Meal");
-			Thread.sleep(1000);
+			Thread.sleep(2000);
 			Select dropdown4 = new Select(driverqa.findElement(Booking.MealGuests));
 			dropdown4.selectByVisibleText("1");
-			Thread.sleep(1000);
+			Thread.sleep(2000);
 			driverqa.findElement(Booking.SelectDate).click();
 			test.log(LogStatus.INFO, "Entered Extra Meal Details");
 			test.log(LogStatus.PASS, "Extra Meal Details");
@@ -363,6 +365,6 @@ public class Accommodation_Book_Extra_Meal {
 
 		rep.endTest(test);
 		rep.flush();
-		driverqa.close();
+		//driverqa.close();
 	}
 }

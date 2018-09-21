@@ -200,8 +200,7 @@ public class Find_Transfer_Booking {
 		} catch (Throwable e) {
 			test.log(LogStatus.FAIL, "Transfer Search");
 
-			obj.Takesnap(driverqa,
-					Config.SnapShotPath() + "/Transfer/Error/Find_Transfer_Booking/Search-Result.jpg");
+			obj.Takesnap(driverqa, Config.SnapShotPath() + "/Transfer/Error/Find_Transfer_Booking/Search-Result.jpg");
 			errorpath = Config.SnapShotPath() + "/Transfer/Error/Find_Transfer_Booking/Search-Result.jpg";
 			logger.info(e.getMessage());
 			test.log(LogStatus.FAIL, e.getMessage());
@@ -244,8 +243,7 @@ public class Find_Transfer_Booking {
 			driverqa.findElement(Transfer.pickUp).sendKeys("Airport");
 			driverqa.findElement(Transfer.DropOff).sendKeys("Hotel");
 			Thread.sleep(2000);
-			obj.Takesnap(driverqa,
-					Config.SnapShotPath() + "/Transfer/Find_Transfer_Booking/Passenger-Details.jpg");
+			obj.Takesnap(driverqa, Config.SnapShotPath() + "/Transfer/Find_Transfer_Booking/Passenger-Details.jpg");
 			driverqa.findElement(Transfer.TransferPrcdToBookChckBox).click();
 			logger.info("Entered Passenger details");
 			test.log(LogStatus.INFO, "Entered Passenger details");
@@ -362,11 +360,13 @@ public class Find_Transfer_Booking {
 			obj.Takesnap(driverqa, Config.SnapShotPath() + "/Transfer/Find_Transfer_Booking/View-Booking.jpg");
 			driverqa.findElement(Booking.ViewBooking).click();
 			Thread.sleep(2000);
-			obj.Takesnap(driverqa, Config.SnapShotPath() + "/Transfer/Find_Transfer_Booking/Searched-Booking-Details1.jpg");
+			obj.Takesnap(driverqa,
+					Config.SnapShotPath() + "/Transfer/Find_Transfer_Booking/Searched-Booking-Details1.jpg");
 			// This will scroll the page till the element is found
 			js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
 			Thread.sleep(2000);
-			obj.Takesnap(driverqa, Config.SnapShotPath() + "/Transfer/Find_Transfer_Booking/Searched-Booking-Details2.jpg");
+			obj.Takesnap(driverqa,
+					Config.SnapShotPath() + "/Transfer/Find_Transfer_Booking/Searched-Booking-Details2.jpg");
 			wait.until(ExpectedConditions.visibilityOfElementLocated(Booking.BookingStatusPrepay));
 			String ExpectedStatus = "Confirmed";
 			String ExpectedTransferName = excel.getData(0, 32, 1);
@@ -420,4 +420,3 @@ public class Find_Transfer_Booking {
 		driverqa.close();
 	}
 }
-

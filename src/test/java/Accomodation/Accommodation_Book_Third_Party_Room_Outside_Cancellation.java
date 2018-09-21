@@ -130,12 +130,13 @@ public class Accommodation_Book_Third_Party_Room_Outside_Cancellation {
 				   Thread.sleep(2000);
 				   wait.until(ExpectedConditions.visibilityOfElementLocated(Search.dest));
 				   driverqa.findElement(Search.dest).sendKeys(excel.getData(0, 11, 1));
-				   Thread.sleep(3000);
+				   Thread.sleep(4000);
 				   action.sendKeys(Keys.ARROW_DOWN).build().perform();
 				   action.sendKeys(Keys.ENTER).build().perform();
 				   test.log(LogStatus.INFO, "Selecting dates");
 				   driverqa.findElement(Search.InDate).click();
 				   wait.until(ExpectedConditions.visibilityOfElementLocated(Search.CalenderIN));
+				   driverqa.findElement(Search.nextmnth).click();
 				   driverqa.findElement(Search.nextmnth).click();
 				   driverqa.findElement(Search.nextmnth).click();
 					List<WebElement> allDates=driverqa.findElements(Search.CalenderIN);
@@ -177,7 +178,10 @@ public class Accommodation_Book_Third_Party_Room_Outside_Cancellation {
 	                     Thread.sleep(2000);
 						 obj.Takesnap(driverqa, Config.SnapShotPath() + "/Accommodation/Accommodation_Book_Third_Party_Room_Outside_Cancellation/Search-Result.jpg");
                          String actualresult= driverqa.findElement(Search.HotelTitle).getText();
-						 Assert.assertTrue(actualresult.equalsIgnoreCase(expectedresult));
+                         System.out.println(actualresult);
+                         System.out.println(expectedresult);
+						 //Assert.assertTrue(actualresult.equalsIgnoreCase(expectedresult));
+						 Assert.assertTrue(actualresult.equals(expectedresult));
 						 test.log(LogStatus.INFO, "Ending HotelSearch Prepay");
 						 test.log(LogStatus.PASS, "PASSED HotelSearch Prepay");
 						 logger.info("Hotel Search Complete Prepay");
@@ -212,14 +216,14 @@ public class Accommodation_Book_Third_Party_Room_Outside_Cancellation {
 					driverqa.findElement(Booking.OnePaxlastName).sendKeys(excel.getData(0, 21, 2));
 					Select passengertitle = new Select(driverqa.findElement(Booking.OnePaxTitle));
 					passengertitle.selectByIndex(1);
-					if (driverqa.findElements(Booking.TwoPaxFirstName).size() != 0)
+					/*if (driverqa.findElements(Booking.TwoPaxFirstName).size() != 0)
 					{
 					driverqa.findElement(Booking.TwoPaxFirstName).sendKeys(excel.getData(0, 22, 1));
 					Thread.sleep(1000);
 					driverqa.findElement(Booking.TwoPaxLastName).sendKeys(excel.getData(0, 22, 2));
 					Select passengertitle2 = new Select(driverqa.findElement(Booking.TwoPaxTitle));
 					passengertitle2.selectByIndex(1);
-					}
+					}*/
 					driverqa.findElement(Booking.PrcdToBookChckBox).click();
 					Thread.sleep(2000);
 					obj.Takesnap(driverqa, Config.SnapShotPath() + "/Accommodation/Accommodation_Book_Third_Party_Room_Outside_Cancellation/Passenger-Details.jpg");
@@ -281,7 +285,7 @@ public class Accommodation_Book_Third_Party_Room_Outside_Cancellation {
 
 			rep.endTest(test);
 			rep.flush();
-			driverqa.close();
+			//driverqa.close();
 		}
 	 }
 

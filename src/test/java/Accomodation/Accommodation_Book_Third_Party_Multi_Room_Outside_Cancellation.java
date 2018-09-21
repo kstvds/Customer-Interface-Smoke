@@ -137,13 +137,14 @@ public class Accommodation_Book_Third_Party_Multi_Room_Outside_Cancellation {
 			Actions actions = new Actions(driverqa);
 			actions.moveToElement(element1).click().perform();
 			driverqa.findElement(Search.dest).sendKeys(excel.getData(0, 15, 1));
-			Thread.sleep(3000);
+			Thread.sleep(4000);
 			action.sendKeys(Keys.ARROW_DOWN).build().perform();
 			// action.sendKeys(Keys.ARROW_DOWN).build().perform();
 			action.sendKeys(Keys.ENTER).build().perform();
 			test.log(LogStatus.INFO, "Selecting dates");
 			driverqa.findElement(Search.InDate).click();
 			wait.until(ExpectedConditions.visibilityOfElementLocated(Search.CalenderIN));
+			driverqa.findElement(Search.nextmnth).click();
 			driverqa.findElement(Search.nextmnth).click();
 			driverqa.findElement(Search.nextmnth).click();
 			List<WebElement> allDates = driverqa.findElements(Search.CalenderIN);
@@ -194,6 +195,8 @@ public class Accommodation_Book_Third_Party_Multi_Room_Outside_Cancellation {
 			obj.Takesnap(driverqa, Config.SnapShotPath()
 					+ "/Accomodation/Accommodation_Book_Third_Party_Multi_Room_Outside_Cancellation/Search-Result.jpg");
 			String actualresult = driverqa.findElement(Search.HotelTitle).getText();
+			System.out.println(actualresult);
+			System.out.println(expectedresult);
 			Assert.assertTrue(actualresult.contains(expectedresult));
 			test.log(LogStatus.INFO, "Ending HotelSearch ");
 			test.log(LogStatus.PASS, "PASSED HotelSearch ");
@@ -219,11 +222,19 @@ public class Accommodation_Book_Third_Party_Multi_Room_Outside_Cancellation {
 			wait.until(ExpectedConditions.visibilityOfElementLocated(Multi_Room.Selecttworoomsaftersearch));
 			test.log(LogStatus.INFO, "Selecting Room");
 			logger.info("Selecting Room");
+			Thread.sleep(2000);
 			Select dropdown1 = new Select(driverqa.findElement(Multi_Room.Selecttworoomsaftersearch));
 			dropdown1.selectByVisibleText("2");
 			Thread.sleep(2000);
 			obj.Takesnap(driverqa, Config.SnapShotPath()
 					+ "/Accomodation/Accommodation_Book_Third_Party_Multi_Room_Outside_Cancellation/Passenger-Details.jpg");
+			JavascriptExecutor js3 = (JavascriptExecutor) driverqa;
+			WebElement ScrollElement = driverqa.findElement(Booking.ScrollElement);
+
+			// This will scroll the web page till end.
+
+			js3.executeScript("arguments[0].scrollIntoView();", ScrollElement);
+			Thread.sleep(1000);
 			driverqa.findElement(Multi_Room.BookNowMultiRoom).click();
 			test.log(LogStatus.INFO, "Room Selected");
 			logger.info("Room Selected");
@@ -235,30 +246,27 @@ public class Accommodation_Book_Third_Party_Multi_Room_Outside_Cancellation {
 			driverqa.findElement(Booking.OnePaxlastName).sendKeys(excel.getData(0, 20, 2));
 			Select passengertitle = new Select(driverqa.findElement(Booking.OnePaxTitle));
 			passengertitle.selectByIndex(1);
-			/*
-			 * if (driverqa.findElements(Booking.TwoPaxFirstName).size() != 0) {
-			 * driverqa.findElement(Booking.TwoPaxFirstName).sendKeys(excel.
-			 * getData(0, 22, 1)); Thread.sleep(1000);
-			 * driverqa.findElement(Booking.TwoPaxLastName).sendKeys(excel.
-			 * getData(0, 22, 2)); Select passengertitle2 = new
-			 * Select(driverqa.findElement(Booking.TwoPaxTitle));
-			 * passengertitle2.selectByIndex(1); }
-			 */
-			driverqa.findElement(Multi_Room.FirstName1Room2).sendKeys(excel.getData(0, 21, 1));
+			/*if (driverqa.findElements(Booking.TwoPaxFirstName).size() != 0) {
+				driverqa.findElement(Booking.TwoPaxFirstName).sendKeys(excel.getData(0, 22, 1));
+				Thread.sleep(2000);
+				driverqa.findElement(Booking.TwoPaxLastName).sendKeys(excel.getData(0, 22, 2));
+				Select passengertitle2 = new Select(driverqa.findElement(Booking.TwoPaxTitle));
+				passengertitle2.selectByIndex(1);
+			}*/
+			driverqa.findElement(Multi_Room.FirstName1Room2).sendKeys(excel.getData(0, 23, 1));
 			Thread.sleep(1000);
-			driverqa.findElement(Multi_Room.LastName1Room2).sendKeys(excel.getData(0, 21, 2));
+			driverqa.findElement(Multi_Room.LastName1Room2).sendKeys(excel.getData(0, 23, 2));
 			Select passengertitle3 = new Select(driverqa.findElement(Multi_Room.Title1Room2));
 			passengertitle3.selectByIndex(1);
-			/*
-			 * if (driverqa.findElements(Multi_Room.FirstName2Room2).size() !=
-			 * 0) {
-			 * driverqa.findElement(Multi_Room.FirstName2Room2).sendKeys(excel.
-			 * getData(0, 22, 1)); Thread.sleep(1000);
-			 * driverqa.findElement(Multi_Room.LastName2Room2).sendKeys(excel.
-			 * getData(0, 22, 2)); Select passengertitle2 = new
-			 * Select(driverqa.findElement(Multi_Room.Title2Room2));
-			 * passengertitle2.selectByIndex(1); }
-			 */
+
+			/*if (driverqa.findElements(Multi_Room.FirstName2Room2).size() != 0) {
+				driverqa.findElement(Multi_Room.FirstName2Room2).sendKeys(excel.getData(0, 22, 1));
+				Thread.sleep(1000);
+				driverqa.findElement(Multi_Room.LastName2Room2).sendKeys(excel.getData(0, 22, 2));
+				Select passengertitle2 = new Select(driverqa.findElement(Multi_Room.Title2Room2));
+				passengertitle2.selectByIndex(1);
+			}*/
+
 			driverqa.findElement(Booking.PrcdToBookChckBox).click();
 			Thread.sleep(2000);
 			obj.Takesnap(driverqa, Config.SnapShotPath()
@@ -343,7 +351,6 @@ public class Accommodation_Book_Third_Party_Multi_Room_Outside_Cancellation {
 
 		rep.endTest(test);
 		rep.flush();
-		driverqa.close();
+		//driverqa.close();
 	}
 }
-

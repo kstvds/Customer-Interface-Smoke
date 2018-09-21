@@ -132,7 +132,7 @@ public class Find_Booking {
 			Thread.sleep(2000);
 			wait.until(ExpectedConditions.visibilityOfElementLocated(Search.dest));
 			driverqa.findElement(Search.dest).sendKeys(excel.getData(0, 12, 1));
-			Thread.sleep(3000);
+			Thread.sleep(6000);
 			action.sendKeys(Keys.ARROW_DOWN).build().perform();
 			// action.sendKeys(Keys.ARROW_DOWN).build().perform();
 			action.sendKeys(Keys.ENTER).build().perform();
@@ -275,10 +275,11 @@ public class Find_Booking {
 		logger.info("Searching Booking Details");
 		test.log(LogStatus.INFO, "Searching Booking Details");
 		try {
-
+			Thread.sleep(2000);
 			// WebElement locOfOrder =
 			// driverqa.findElement(Booking.BookingRefernceNo);
 			RefernceNumber = driverqa.findElement(Booking.BookingRefernceNo).getText();
+			Thread.sleep(2000);
 			driverqa.findElement(Booking.FindBooking).click();
 			wait.until(ExpectedConditions.visibilityOfElementLocated(Booking.SearchRefernceNumber));
 
@@ -353,6 +354,6 @@ public class Find_Booking {
 
 		rep.endTest(test);
 		rep.flush();
-		driverqa.close();
+		// driverqa.close();
 	}
 }

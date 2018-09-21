@@ -49,8 +49,8 @@ public class Edit_Profile {
 
 	@Test
 	@Parameters({ "browsername" })
-	public void PendingPayments(String browsername) throws Exception {
-		test = rep.startTest("Pending Payments");
+	public void EditProfile(String browsername) throws Exception {
+		test = rep.startTest("Edit_Profile");
 		excel = new ExcelDataConfig(Config.getExcelPathBook());
 		PropertyConfigurator.configure("Log4j.properties");
 		logger.info("Test Case Started");
@@ -137,7 +137,7 @@ public class Edit_Profile {
 			logger.info("Editing Name");
 			WebElement Name = driverqa.findElement(Others.EditProfileChangeName);
 			Name.clear();
-			Name.sendKeys("Anindya");
+			Name.sendKeys("AnindyaAA");
 			Thread.sleep(2000);
 			obj.Takesnap(driverqa, Config.SnapShotPath() + "/Others/Edit_Profile/Edited-Name.jpg");
 			driverqa.findElement(Others.ConfirmUpdateProfile).click();
@@ -180,7 +180,7 @@ public class Edit_Profile {
 			logger.info("Editing Name");
 			WebElement Name = driverqa.findElement(Others.EditCompanyAdddress);
 			Name.clear();
-			Name.sendKeys("KolkataABC123");
+			Name.sendKeys("KolkataABC1234");
 			Thread.sleep(2000);
 			obj.Takesnap(driverqa, Config.SnapShotPath() + "/Others/Edit_Profile/Edited-Address.jpg");
 			driverqa.findElement(Others.ConfirmUpdateProfile).click();
